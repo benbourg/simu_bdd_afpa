@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width:device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="stylesheet" href="css/accueil_pia.css" />
+    <link rel="stylesheet" href="css/bulma.min.css" />
+    <script src="https://kit.fontawesome.com/cabd9486f7.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/accueil_pia.js" defer></script> 
+    <title>Accueil de la PIA</title> 
+  </head>
+<!--Mise en place de la classe "hero full" afin que la page prennent toute la place de l'écran -->
+  <body class="hero is-fullheight">
+
+<!--Barre de navigation avec le logo et le titre de la page à gauche et les différents bouton de navigation à droite. Le menu burger s'active lorsque la page passe en dessous de 1024px-->
+
+    <header class="hero-head">
+      <nav class="navbar" role="navigation" aria-label="main-navigation">          
+        <div class="navbar-brand">      
+          <img class="logo navbar-item" src="images/logo.png" alt="logo PIA"/>
+          <h3 class="title is-2 navbar-item is-size-4-mobile">Pinkie Intelligence Agency</h3>
+
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div> 
+
+        <div class="navbar-menu navbar-end subtitle is-4 is-size-5-mobile">
+          <a class="navbar-item" href="accueil_pia.html">Accueil</a>
+          <a class="navbar-item" href="connect_pia.html">Base de données</a>
+          <a class="navbar-item" href="#">Nous contacter</a>
+          <a class="navbar-item mr-5" href="#">Se connecter</a>
+        </div>
+      </nav>
+    </header>
+
+<!--Emplacement pour indiquer les vilains les plus recherché et ajout des fléches déroulante sur chaque côté-->
+
+    <main class="columns hero-body">
+
+      <div class="column is-1 is-offset-1 has-text-centered">
+        <a href="#" onclick="slide('gauche');">
+          <i class="fas fa-chevron-left fa-3x has-text-grey"></i>
+        </a>
+      </div>
+            
+      <article class="box column is-8" id="warningId">
+        <div class="columns">
+          <figure class="column is-4 has-text-centered-mobile">
+            <img class="photo" src="images/NightmareDiv.jpg" alt="Photo vilain recherché activement" id="photoId" />
+          </figure>
+
+          <section class="column is-8 content">
+            <h2 class="title is-2 has-text-centered is-size-3-mobile"><i class="fas fa-exclamation-triangle mr-3 has-text-danger pulse"></i>On recherche activement<i class="fas fa-exclamation-triangle ml-3 has-text-danger pulse"></i></h2>
+            <h3 class="title is-3 is-size-5-mobile has-text-centered has-text-danger" id="nameId">Nightmare Div</h3>
+            <h5 class="title is-5 is-size-6-mobile">Description :</h5>
+            <p id="descriptionId">Codeur fou ayant tendance à oublier l'existence des balises sémantiques et place des div partout dans son code</p>
+            <h5 class="title is-5 is-size-6-mobile">Crime récent :</h5>
+            <p id="crimeId">Ne s'est pas mis à jour concernant l'évolution des langages depuis 1995</p>
+            <h5 class="title is-5 is-size-6-mobile">Dernière position connue :</h5>
+            <p id="positionId">Position inconnue actuellement, il oeuvrerait apparemment par le biais de millier de développeurs, rendant toutes recherches difficiles</p>
+            <a class="level-right" href="bdd_pia.html">En savoir plus...</a>
+          </section>
+        </div>
+      </article>
+
+      <div class="column is-1 has-text-centered">
+        <a href="#" onclick="slide('droite');">
+          <i class="fas fa-chevron-right fa-3x has-text-grey"></i>
+        </a>
+      </div>
+
+    </main>
+
+<!--Ceci est un footer qui se centre en dessous de 1024px-->    
+
+    <footer class="footer level hero-foot has-text-centered-mobile">
+      <div class="level-left">
+        <i class="level-item fas fa-3x fa-user-secret" id="itsASpy"></i>
+        <p class="level-item">We watching you</p>
+      </div>
+
+      <div class="level-right">
+        <p class="level-item">Suivez nous ! </br>
+        (Mais de tout façon, on a déjà vos données...)</p>              
+        <a href="https://www.facebook.com/mylittlepony/"><i class="level-item fab fa-3x fa-facebook-f has-text-info ml-5"></i></a>
+        <a href="https://twitter.com/mylittlepony?lang=fr"><i class="level-item fab fa-3x fa-twitter has-text-info ml-5"></i></a>
+      </div>
+    </footer>
+
+  </body>
+</html>
