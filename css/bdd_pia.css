@@ -1,0 +1,17 @@
+header, footer {
+    font-family: Akaya;
+}
+
+.logo {
+
+    max-height:9vh;
+}
+
+.photo {
+    max-height: 30vh;
+}
+
+@font-face {
+    font-family: Akaya;
+    src: url(../font/AkayaTelivigala-Regular.ttf)
+}

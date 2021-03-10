@@ -1,0 +1,57 @@
+h1, .chut {
+    font-family:Akaya ;
+}
+
+.logo {
+    max-height:54vh;
+    }
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.pulse {
+    
+    animation: pulse ease 2s; 
+    -webkit-animation: pulse ease 2s; 
+    -moz-animation: pulse ease 2s; 
+    -o-animation: pulse ease 2s; 
+    -ms-animation: pulse ease 2s; 
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-moz-keyframes pulse {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-webkit-keyframes pulse {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-o-keyframes pulse {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@-ms-keyframes pulse {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@font-face {
+    font-family: Akaya;
+    src: url(../font/AkayaTelivigala-Regular.ttf)
+}
