@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width:device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="stylesheet" href="css/bdd_pia.css" />
+    <link rel="stylesheet" href="css/bulma.min.css" />
+    <script type="text/javascript" src="js/bdd_pia.js" defer></script> 
+    <script src="https://kit.fontawesome.com/cabd9486f7.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <title>Base de données de la PIA</title> 
+  </head>
+
+  <body>
+
+<!--Barre de navigation avec le logo et le titre de la page à gauche et les différents bouton de navigation à droite. Le menu burger s'active lorsque la page passe en dessous de 1024px-->
+
+    <header>
+      <nav class="navbar" role="navigation" aria-label="main-navigation">          
+        <div class="navbar-brand">      
+          <img class="logo navbar-item" src="images/logo.png" alt="logo PIA"/>
+          <h3 class="title is-2 navbar-item is-size-4-mobile">Pinkie Intelligence Agency</h3>
+
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div> 
+
+        <div class="navbar-menu navbar-end subtitle is-4 is-size-5-mobile">
+          <a class="navbar-item" href="accueil_pia.html">Accueil</a>
+          <a class="navbar-item" href="bdd_pia.html">Base de données</a>
+          <a class="navbar-item" href="#">Nous contacter</a>
+          <a class="navbar-item mr-5" href="#">Se connecter</a>
+        </div>
+      </nav>
+    </header>
+
+    <h1 class="title is-1 has-text-centered mt-5 is-size-3-mobile">Base de données des supers-vilains de la PIA</h1>
+    <p class="has-text-centered">(Si vous êtes un simple utilisateur, vous ne devez pas voir ça, veuillez sortir d'ici)</p>
+    
+    <main class="section columns">
+
+<!--Emplacement pour indiquer le vilain de la semaine-->
+
+      <article class="column is-2 has-text-centered-mobile">
+        <section class="box">
+          <h5 class="subtitle is-5">Le vilain de la semaine !</h5>
+
+          <!--<a href="accueil_pia.html">Bouh qu'il est méchant !! :(</a>-->
+          <img class="image" src="images/NightmareDiv.jpg" alt="Photo vilain recherché activement" />
+          <p class="level-right mt-5">
+            <a>
+              <i class="fas fa-thumbs-up fa-lg thumbU"></i>
+            </a>
+            <a>
+              <i class="fas fa-thumbs-down ml-5 fa-lg thumbD"></i>
+            </a>
+          </p>
+        </section>
+
+<!--Emplacement de la liste des vilains connus à ce jour avec un bouton (non fonctionnel actuellement) permettant de rajouter un vilain dans la liste-->
+
+        <section class="box">  
+          <h5 class="subtitle is-5">Liste des vilains connus</h5>
+          <ul class="menu-list">
+            <li><a href="#" onclick="vilain(kilepabo);">Kilépabô</a></li>
+            <li><a href="#" onclick="vilain(nightmareDiv);">Nightmare Div</a></li>
+            <li><a href="#" onclick="vilain(drEmmettBrown);">Dr Emmett Brown</a></li>
+            <li><a href="#" onclick="vilain(jonSnow);">John Snow</a></li>
+            <li><a href="#">Un futur vilain</a></li>
+            <li><a href="#">Et enconre un autre</a></li>
+            <li><a href="#">Cela fait beaucoup non ?</a></li>
+          </ul>
+          <div class="level-right">
+            <input class="mt-5 button is-small" type="submit" onclick="notYet();" value="Ajouter un vilain" />
+          </div>
+        </section>
+      </article>
+
+<!--Emplacement de l'affiche descriptive du vilain centrée sur la page-->
+
+        <article  class="column is-5 is-offset-1" id="affiche">
+          <div class="box">
+            <section class="level">
+              <figure class="has-text-centered-mobile">
+                <img class="photo" src="images/chopper.png" alt="Photo vilain" id="photoId"/>
+              </figure>
+
+              <h2 class="title is-2 has-text-centered level-item is-size-3-mobile" id="nameId">Kilépabô</h2>
+            </section>
+
+            <section class="content mt-5">
+              <h5 class="title is-5">Description</h5>
+              <p id="descriptionId">Mais pourquoi est il si méchant aussi ?</p>
+
+              <h5 class="title is-5">Associés connus :</h5>
+              <ul id="associeId">
+                <li>Associé</li>
+                <li>Associé</li>
+              </ul>
+
+              <h5 class="title is-5">Vilénies connues :</h5>
+                <ul id="vilenieId">
+                  <li>vilénie</li>
+                  <li>vilénie</li>
+                  <li>vilénie</li>
+                </ul>
+
+                <h5 class="title is-5">Dernière position connu :</h5>
+                <p id="positionId">Il était là !!</p>
+
+                <h5 class="title is-5">Mise en garde :</h5>
+                <p id="gardeId">Attention, c'est vraiment un vilain pas beau !</p>
+            </section>
+          </div>
+        </article>
+
+<!--Section des commentaires-->
+
+        <aside class="column is-3 is-offset-1">
+
+          <div class="box">
+
+          <h5 class="title is-5 has-text-centered">Derniers commentaires </h5>
+          <section class="media box">
+            <figure class="media-left image is-64x64">                      
+              <img src="images/johnSmith.jpg">
+            </figure>
+            <div class="media-content">                     
+              <p class="content">
+                <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+              </p>
+              <nav class="level is-mobile">
+                <div class="level-left">
+                  <a class="level-item">
+                    <i class="icon is-small fas fa-reply"></i>
+                  </a>
+                  <a class="level-item">
+                    <i class="icon is-small fas fa-retweet"></i>
+                  </a>
+                  <a class="level-item">
+                    <i class="icon is-small fas fa-heart"></i>
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </section>
+
+          <section class="media box">
+            <figure class="media-left image is-64x64">                      
+              <img src="images/jonsnow.jpg">
+            </figure>
+            <div class="media-content">
+              <p class="content">
+                <strong>Jon Snow</strong> <small>@joneverknowsnow</small> <small>25m</small>
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+              </p>
+              <nav class="level is-mobile">
+                <div class="level-left">
+                  <a class="level-item">
+                    <i class="icon is-small fas fa-reply"></i>
+                  </a>
+                  <a class="level-item">
+                    <i class="icon is-small fas fa-retweet"></i>
+                  </a>
+                  <a class="level-item">
+                    <i class="icon is-small fas fa-heart"></i>
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </section>
+
+          <section class="media box">
+            <figure class="media-left image is-64x64">                      
+              <img src="images/johnDoe.jpg">
+            </figure>
+            <div class="media-content">                     
+              <p class="content">
+                <strong>John Doe</strong> <small>@johndoe</small> <small>15m</small>
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+              </p>
+              <nav class="level is-mobile">
+                <div class="level-left">
+                  <a class="level-item">
+                    <i class="icon is-small fas fa-reply"></i>
+                  </a>
+                  <a class="level-item">
+                    <i class="icon is-small fas fa-retweet"></i>
+                  </a>
+                  <a class="level-item">
+                    <i class="icon is-small fas fa-heart"></i>
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </section>
+                
+          <section class="media">
+            <div class="media-content">
+              <p class="control field">
+                <textarea class="textarea" placeholder="Add a comment..."></textarea>
+              </p>
+              <p class="control field level-right">
+                <button class="button" onclick="notYet();">Envoyer</button>
+              </p> 
+              <p class="has-text-centered is-size-7">(Attention, celui-ci sera enregistré évidemment...)</p>                      
+            </div>
+          </section>
+        </div>
+      </aside>
+
+    </main>
+
+    <footer class="footer level has-text-centered-mobile">
+      <div class="level-left">
+        <i class="level-item fas fa-3x fa-user-secret" id="itsASpy"></i>
+        <p class="level-item">We watching you</p>
+      </div>
+
+      <div class="level-right">                
+        <p class="level-item">Suivez nous ! </br>
+          (Mais de tout façon, on a déjà vos données...)
+        </p>
+              
+        <a href="https://www.facebook.com/mylittlepony/"><i class="level-item fab fa-3x fa-facebook-f has-text-info ml-5"></i></a>
+        <a href="https://twitter.com/mylittlepony?lang=fr"><i class="level-item fab fa-3x fa-twitter has-text-info ml-5"></i></a>
+      </div>
+    </footer>
+
+  </body>
+</html>
